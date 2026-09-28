@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-ready">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAGSNet 26 | Ceylon Academy of Gemmological Science</title>
+  <meta name="description" content="Ceylon Academy of Gemmological Science presents CAGSNet 26 — The premier VVIP gemmology networking gala and launch of the CAGSNET digital ecosystem. 29 October 2026, Waters Edge, Sri Lanka.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/jpeg" href="/assets/cags-seal.jpg">
+</head>
+<body>
+
+  <!-- AMBIENT AUDIO CONTROLLER -->
+  <button id="audio-toggle" class="audio-toggle-compact" aria-label="Toggle atmospheric soundscape">
+    <div class="audio-bars" id="audio-bars">
+      <i></i><i></i><i></i><i></i>
+    </div>
+    <span>SOUND: <strong id="audio-state">OFF</strong></span>
+  </button>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- SITE LOADER / GATEWAY -->
+  <div class="site-loader" id="site-loader" aria-hidden="true">
+    <div class="loader-mark">
+      <div class="loader-stars">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg>
+      </div>
+      <div class="loader-word">CEYLON ACADEMY OF GEMMOLOGICAL SCIENCE</div>
+    </div>
+    <div class="loader-progress"><span></span></div>
+  </div>
+
+  <!-- SITE HEADER (Flush cinematic header, NO floating pills) -->
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="CAGSNet 26 Home">
+      <img class="brand-logo" src="/assets/cags-seal.jpg" alt="CAGS Crest" width="1326" height="655" style="border-radius:0;">
+      <span class="brand-name">CAGSNET 26</span>
+    </a>
+    <div class="header-actions">
+      <a class="button button-small" href="#tickets">
+        Reserve pass <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle-lines" aria-hidden="true"><i></i><i></i></span>
+        <span class="menu-toggle-text">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN FOGGY NAVIGATION OVERLAY -->
+  <nav id="site-nav" class="site-nav" aria-label="Site navigation" hidden>
+    <div class="site-nav-fog" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="site-nav-inner">
+      <ol class="site-nav-list">
+        <li>
+          <a href="#about">
+            <span class="site-nav-index" aria-hidden="true">01</span>
+            <span class="site-nav-label">The Genesis</span>
+            <span class="site-nav-note">Ratna Dweepa &amp; Centuries of Secrecy</span>
+          </a>
+        </li>
+        <li>
+          <a href="#stories">
+            <span class="site-nav-index" aria-hidden="true">02</span>
+            <span class="site-nav-label">The Broken Chain</span>
+            <span class="site-nav-note">Why Foreign Hubs Control The Market</span>
+          </a>
+        </li>
+        <li>
+          <a href="#tables">
+            <span class="site-nav-index" aria-hidden="true">03</span>
+            <span class="site-nav-label">Supply Chain Tables</span>
+            <span class="site-nav-note">Curated Seating: Miners to Exporters</span>
+          </a>
+        </li>
+        <li>
+          <a href="#ecosystem">
+            <span class="site-nav-index" aria-hidden="true">04</span>
+            <span class="site-nav-label">The Ecosystem</span>
+            <span class="site-nav-note">CAGSNET Digital Platform Launch</span>
+          </a>
+        </li>
+        <li>
+          <a href="#plan">
+            <span class="site-nav-index" aria-hidden="true">05</span>
+            <span class="site-nav-label">Waters Edge Gala</span>
+            <span class="site-nav-note">October 29, 2026 · Grand Ballroom</span>
+          </a>
+        </li>
+        <li>
+          <a href="#sponsors">
+            <span class="site-nav-index" aria-hidden="true">06</span>
+            <span class="site-nav-label">Partnerships</span>
+            <span class="site-nav-note">Padparadscha, Ruby, Sapphire Tiers</span>
+          </a>
+        </li>
+        <li>
+          <a href="#tickets">
+            <span class="site-nav-index" aria-hidden="true">07</span>
+            <span class="site-nav-label">Accreditation</span>
+            <span class="site-nav-note">Delegate Registration &amp; Proposal PDF</span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="/assets/hero-gem.jpg" alt="Royal Ceylon Blue Sapphire and Padparadscha at Waters Edge Gala" fetchpriority="high" width="1672" height="941">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      
+      <h1 id="hero-title">
+        <span class="haunted-word">CAGSNet 26</span>
+        <span class="city-word">COLOMBO
+          <span class="title-star" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/>
+            </svg>
+          </span>
+        </span>
+      </h1>
+
+      <div class="hero-topline">
+        <a class="hero-creator" href="#about">Organized by <strong>Ceylon Academy of Gemmological Science</strong></a>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-intro">
+          <p>
+            <span class="hero-intro-sentence">The premier sovereign networking gala uniting 2,000+ alumni, miners, lapidary masters, and global trading houses.</span>
+            <span class="hero-intro-sentence">October 29, 2026 · Waters Edge Grand Ballroom · 18:00 HRS Onwards.</span>
+          </p>
+        </div>
+        <a href="#about" class="explore-link" aria-label="Explore the gathering">
+          <span class="round-arrow" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 4v16M5 13l7 7 7-7"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero-coordinates" aria-hidden="true">6°54′ N &nbsp; 79°54′ E · WATERS EDGE · RATNA DWEEPA</div>
+    </section>
+
+    <!-- SECTION 2: INTRO -->
+    <section id="about" class="intro section-pad">
+      <div class="section-kicker">
+        <span>01 / The Island of Gems</span>
+        <span>Centuries of Guarded Secrecy</span>
+      </div>
+      
+      <h2 class="reveal-word-block">
+        AN ISLAND OF WEALTH.<br>
+        <span>A TRADITION OF</span><br>
+        SILENCE.
+      </h2>
+
+      <div class="intro-bottom">
+        <figure class="tour-proof reveal">
+          <div class="photo-window">
+            <img src="/assets/origin-mining.jpg" alt="Artisanal gem miner washing sapphire gravel in Ratnapura" loading="lazy" width="1024" height="647">
+          </div>
+          <span class="large-asterisk" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/>
+            </svg>
+          </span>
+        </figure>
+        <p class="reveal">
+          For over two millennia, Sri Lanka has unearthed the earth’s most coveted untreated sapphires and padparadscha. But knowledge moved like a snail—guarded by dynasties in private corridors while the artisans who unearthed value remained in the shadows. Thailand and foreign bourses seized control of downstream trade. CAGS is forging the missing framework to reclaim Ceylon's sovereignty.
+        </p>
+      </div>
+
+      <div class="tour-facts">
+        <div><strong>2000+</strong><span>Trained CAGS Alumni</span></div>
+        <div><strong>90%</strong><span>Island gem-bearing ground</span></div>
+        <div><strong>OCT 29</strong><span>Waters Edge Gala</span></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: STORIES SCROLL (PINNED HORIZONTAL SCROLL) -->
+    <section class="stories-scroll" id="stories" aria-label="The Disconnected Chain">
+      <div class="stories-pin">
+        <div class="stories-heading">
+          <span>02 / The Disconnected Chain</span>
+          <span class="scroll-instruction">Keep scrolling. The reality unfolds. <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M13 5l7 7-7 7"/></svg></span></span>
+        </div>
+
+        <div class="story-track">
+          <!-- Story 1 -->
+          <article class="story story-ghost" aria-labelledby="story-1-title">
+            <img class="story-background" src="/assets/origin-mining.jpg" alt="Gem miner in riverbed" loading="lazy" width="1672" height="941">
+            <div class="story-scrim"></div>
+            <div class="story-content">
+              <span class="eyebrow">Case file 01 / The Deep Pits</span>
+              <h2 id="story-1-title">NOT EVERY<br>VALUE CREATOR<br><em>IS REWARDED.</em></h2>
+              <p>From dawn till twilight, traditional miners endure deep mud pits and rattan wicker panning. Yet despite unearthing legendary corundum, the primary producers capture the smallest fraction of global wealth.</p>
+              <span class="story-tag">Upstream Mining &amp; Alluvial Gravels</span>
+            </div>
+            <span class="story-number" aria-hidden="true">01</span>
+          </article>
+
+          <!-- Story 2 -->
+          <article class="story story-history" aria-labelledby="story-2-title">
+            <img class="story-background" src="/assets/cutting-craft.jpg" alt="Master gem faceter" loading="lazy" width="1672" height="941">
+            <div class="story-scrim"></div>
+            <div class="story-content">
+              <span class="eyebrow">Case file 02 / The Secret Benches</span>
+              <h2 id="story-2-title">THE KNOWLEDGE<br>DOESN’T<br><em>GET PASSED ON.</em></h2>
+              <p>Thermal heat treatment recipes, precision faceting angles, and market price formulas were hoarded in family safes. Generational gatekeeping crippled Sri Lanka's youth while foreign trading bourses industrialized the science.</p>
+              <span class="story-tag">Lapidary Science &amp; Thermal Enhancement</span>
+            </div>
+            <span class="story-number" aria-hidden="true">02</span>
+          </article>
+
+          <!-- Story 3 -->
+          <article class="story story-ufo" aria-labelledby="story-3-title">
+            <img class="story-background" src="/assets/global-trade.jpg" alt="International gem trading desk" loading="lazy" width="1672" height="941">
+            <div class="story-scrim"></div>
+            <div class="story-content">
+              <span class="eyebrow">Case file 03 / The Foreign Hubs</span>
+              <h2 id="story-3-title">THEY CONTROL<br>THE TRADE<br><em>FROM ABROAD.</em></h2>
+              <p>Countries like Thailand built an iron-clad ecosystem—controlling heat treatment, precision cutting factories, trade bourses, and export logistics. Sri Lanka supplied the raw treasure; foreign bourses collected the sovereignty.</p>
+              <span class="story-tag">Global Price Discovery &amp; Middlemen</span>
+            </div>
+            <span class="story-number" aria-hidden="true">03</span>
+          </article>
+        </div>
+
+        <div class="story-controls">
+          <div class="story-tabs">
+            <button class="is-active" data-story="0" type="button"><span>01</span>The Deep Pits</button>
+            <button data-story="1" type="button"><span>02</span>The Secret Benches</button>
+            <button data-story="2" type="button"><span>03</span>The Foreign Hubs</button>
+          </div>
+          <div class="story-count">
+            <span class="story-count-current">01</span> / 03
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TOUR HIGHLIGHTS / SUPPLY CHAIN SECTORS -->
+    <section class="tour-highlights" id="tables" aria-labelledby="highlights-title">
+      <div class="highlights-atmosphere" aria-hidden="true">
+        <img class="is-active" data-topic-image="miners" src="/assets/origin-mining.jpg" alt="Miners and Geologists" loading="lazy" width="1672" height="941">
+        <img data-topic-image="cutters" src="/assets/cutting-craft.jpg" alt="Lapidary Faceting Masters" loading="lazy" width="1672" height="941">
+        <img data-topic-image="brokers" src="/assets/global-trade.jpg" alt="Brokers and Dealers" loading="lazy" width="1672" height="941">
+        <img data-topic-image="exporters" src="/assets/hero-gem.jpg" alt="International Exporters" loading="lazy" width="1672" height="941">
+        <img data-topic-image="jewelers" src="/assets/jewelry-craft.jpg" alt="Fine Jewelers and Goldsmiths" loading="lazy" width="1672" height="941">
+        <img data-topic-image="tech" src="/assets/digital-platform.jpg" alt="Spectroscopy and Tech Providers" loading="lazy" width="1672" height="941">
+        <img data-topic-image="vip" src="/assets/venue-watersedge.jpg" alt="GIA, DGemG & SLGJA Presidential Suite" loading="lazy" width="1672" height="941">
+      </div>
+
+      <div class="highlights-content section-pad">
+        <div class="highlights-heading">
+          <div class="section-kicker">
+            <span>03 / Curated Dinner Tables</span>
+            <span>Uniting The Fractured Supply Chain</span>
+          </div>
+          <h2 id="highlights-title">THE SUPPLY<br><span>CHAIN TABLES.</span></h2>
+          <p>At the Waters Edge Gala, alumni and delegates are categorized into specialized dinner tables. No more disconnected silos. Every link in the chain convenes.</p>
+        </div>
+
+        <ol class="highlights-list">
+          <li class="topic is-current" data-topic="miners">
+            <span class="topic-index">01 / ALLUVIAL GEM MINERS</span>
+            <div class="topic-body">
+              <h3>MINERS &amp; GEOLOGISTS</h3>
+              <p>Direct representation from Ratnapura, Elahera, and Nivithigala pits. Discussing ethical licensing, direct cooperative pricing, and eliminating predatory intermediary cut-outs.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="cutters">
+            <span class="topic-index">02 / LAPIDARY ARTISANS</span>
+            <div class="topic-body">
+              <h3>CUT &amp; POLISH FACETERS</h3>
+              <p>Sri Lanka’s premier lapidary artisans showcasing brilliant-cut, cushion, and bespoke fantasy cuts. Standardizing precision cutting tolerances for global luxury brands.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="brokers">
+            <span class="topic-index">03 / BOURSE DEALERS</span>
+            <div class="topic-body">
+              <h3>AGENTS &amp; CERTIFIED BROKERS</h3>
+              <p>The vital liquidity providers of Beruwala, Ratnapura, and Colombo bourses. Establishing transparent digital escrow, fair commission benchmarks, and verified certificates.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="exporters">
+            <span class="topic-index">04 / GLOBAL EXPORTERS</span>
+            <div class="topic-body">
+              <h3>INTERNATIONAL TRADERS</h3>
+              <p>Exporters serving Tokyo, Hong Kong, Bangkok, Geneva, and New York. Addressing export taxation, direct air-freight insured logistics, and foreign currency trade facilities.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="jewelers">
+            <span class="topic-index">05 / LUXURY ATELIERS</span>
+            <div class="topic-body">
+              <h3>FINE JEWELERS &amp; GOLDSMITHS</h3>
+              <p>Bridging high-end jewelry manufacturing with natural Ceylon gems. Promoting "Origin Sri Lanka" as an internationally certified mark of royalty and heritage.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="tech">
+            <span class="topic-index">06 / INSTRUMENTATION</span>
+            <div class="topic-body">
+              <h3>SPECTROSCOPY &amp; TECH LABS</h3>
+              <p>Showcasing the latest Raman spectrometers, UV-Vis-NIR instruments, immersion cells, and high-precision diamond/gem balances to detect synthetic simulants.</p>
+            </div>
+          </li>
+          <li class="topic" data-topic="vip">
+            <span class="topic-index">07 / PRESIDENTIAL SUITE</span>
+            <div class="topic-body">
+              <h3>GIA · DGEMG · SLGJA DELEGATION</h3>
+              <p>High-level policy dialogue between the Gemological Institute of America (GIA), German Gemmological Association (DGemG), Sri Lanka Gem &amp; Jewellery Association (SLGJA), and NGJA.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ZOMBIES / CAGSNET DIGITAL ECOSYSTEM -->
+    <section id="ecosystem" class="zombies section-pad">
+      <div class="section-kicker">
+        <span>04 / The Digital Sovereign Engine</span>
+        <span>CAGSNET Developing Ecosystem</span>
+      </div>
+
+      <div class="zombies-layout">
+        <div class="zombies-copy">
+          <h2 class="reveal">THE UNIFIED<br>DIGITAL<br><span>ECOSYSTEM.</span></h2>
+          <div class="zombies-description">
+            <p>CAGSNet launches its developing digital ecosystem—connecting every resource, learning tool, appraisal ledger, and trade corridor in one central hub. Democratizing gemmological knowledge for 2,000+ alumni across the globe.</p>
+            <a class="text-link dark-link" href="#tickets">
+              Explore Platform Integration <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="zombies-photo reveal">
+          <div class="photo-window">
+            <img src="/assets/digital-platform.jpg" alt="CAGSNET Digital Platform" loading="lazy" width="1672" height="941">
+          </div>
+          <figcaption>
+            <span>CAGSNET Engine / Sri Lanka</span>
+            <span>Mine-to-Market Provenance</span>
+          </figcaption>
+          <div class="bz-wordmark" style="font-family:var(--display); font-size:42px; color:var(--accent); letter-spacing:.05em;">CAGSNET</div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PLAN / WATERS EDGE GALA ITINERARY -->
+    <section class="plan section-pad" id="plan">
+      <div class="section-kicker">
+        <span>05 / Waters Edge Grand Ballroom</span>
+        <span>October 29, 2026 · 18:00 Onwards</span>
+      </div>
+
+      <div class="plan-layout">
+        <div class="plan-title">
+          <h2 class="reveal">BEFORE<br>YOU<br><span>ARRIVE.</span></h2>
+          <a class="button" href="#tickets">
+            Reserve pass <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+          </a>
+        </div>
+
+        <div class="plan-details">
+          <div class="faq">
+            <details>
+              <summary>
+                Where does the networking gala take place?
+                <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <p>The Grand Ballroom at Waters Edge, Battaramulla, Sri Lanka. Overlooking the serene Diyawanna Lake at twilight, offering world-class dining, security, and ballroom acoustics.</p>
+            </details>
+
+            <details>
+              <summary>
+                What is the five-hour gala choreography?
+                <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <p>18:00 Arrival &amp; Red Carpet Waterfront Reception; 18:45 Keynotes from international speakers and GIA / DGemG delegates; 19:30 Live Unveiling of the CAGSNET Digital Ecosystem; 20:15 Curated Multi-Course Dinner at designated supply chain tables; 21:15 Commemorative Souvenir Presentation and Charity Gemstone Draw Prize.</p>
+            </details>
+
+            <details>
+              <summary>
+                How are the supply chain dinner tables assigned?
+                <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <p>Delegates are strictly categorized and seated according to their supply chain role (Miners, Cut &amp; Polish Masters, Brokers, Exporters, Jewelers, Tech Vendors, and Institutional VIPs) to eliminate fragmentation and facilitate direct business transactions.</p>
+            </details>
+
+            <details>
+              <summary>
+                What is the official dress code?
+                <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <p>Black-Tie Formal / Formal National Elegance. Attendees are requested to dress to the standard of a sovereign state banquet.</p>
+            </details>
+
+            <details>
+              <summary>
+                How do I add the gala to my calendar?
+                <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <p><a href="javascript:void(0)" id="download-ics-link" style="color:var(--amber); text-decoration:underline;">Click here to download the official .ICS calendar file</a> compatible with Apple Calendar, Google Calendar, and Microsoft Outlook.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: LOCAL / SPONSORSHIP TIERS -->
+    <section class="local section-pad" id="sponsors">
+      <div class="section-kicker">
+        <span>06 / Strategic Alliances</span>
+        <span>Official Sponsorship Dossier</span>
+      </div>
+
+      <div class="local-heading">
+        <h2 class="reveal">PARTNERSHIP<br><span>TIERS.</span></h2>
+        <p>Align your brand with Sri Lanka’s gemstone sovereignty. Review entitlements or download the official PDF proposal.</p>
+      </div>
+
+      <div class="local-links">
+        <a href="#tickets" class="tier-trigger" data-tier="Padparadscha Principal Partner">
+          <span class="local-index">01 / Sole Title Partner</span>
+          <h3>PADPARADSCHA PARTNER</h3>
+          <span class="local-description">Exclusive Principal Billing · Keynote &amp; Co-Launch · Inside Cover in Official Souvenir.</span>
+          <span class="local-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </a>
+
+        <a href="#tickets" class="tier-trigger" data-tier="Ruby Partner (LKR 2,000,000)">
+          <span class="local-index">02 / Co-Host Partner</span>
+          <h3>RUBY PARTNER · LKR 2,000,000</h3>
+          <span class="local-description">Full VIP Table (8 Seats) · Stage LED Presence · Full-Page Souvenir Dossier Profile.</span>
+          <span class="local-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </a>
+
+        <a href="#tickets" class="tier-trigger" data-tier="Sapphire Partner (LKR 1,000,000)">
+          <span class="local-index">03 / Signature Gem</span>
+          <h3>SAPPHIRE PARTNER · LKR 1,000,000</h3>
+          <span class="local-description">Dedicated Sector Dinner Table · Souvenir Profile · LED Stage Screen Logo.</span>
+          <span class="local-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </a>
+
+        <a href="#tickets" class="tier-trigger" data-tier="Emerald Partner (LKR 500,000)">
+          <span class="local-index">04 / Associate Category</span>
+          <h3>EMERALD PARTNER · LKR 500,000</h3>
+          <span class="local-description">4 VIP Passes · Foyer Branding · Half-Page Souvenir Profile · Senior Direct Networking.</span>
+          <span class="local-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 8: TICKETS / DELEGATE ACCREDITATION -->
+    <section class="tickets section-pad" id="tickets">
+      <div class="ticket-background" aria-hidden="true">
+        <img src="/assets/venue-watersedge.jpg" alt="Waters Edge Grand Ballroom under moonlight" loading="lazy" width="1672" height="941">
+      </div>
+
+      <div class="section-kicker">
+        <span>07 / Claim Your Seat</span>
+        <span>The Sovereign Network Awaits</span>
+      </div>
+
+      <div class="ticket-content">
+        <h2 class="reveal">SECURE YOUR<br><span>ACCREDITATION.</span></h2>
+        <p>Attendance is strictly curated for industry contributors, CAGS alumni, and international delegations.<br>Meet us at Waters Edge Grand Ballroom on October 29, 2026.</p>
+        
+        <button class="button button-large" id="open-box-office-btn" type="button">
+          Request Accreditation <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </button>
+
+        <span class="ticket-note">
+          Download the official <a href="/sponsorship-proposal.pdf" target="_blank" download style="color:var(--amber); text-decoration:underline;">Sponsorship Proposal (PDF)</a> or book a pass.
+        </span>
+
+        <div class="review-proof">
+          <span class="review-proof-score">2000+</span>
+          <span class="review-proof-copy"><strong>CAGS Alumni</strong><span>Across 32 Countries</span></span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer section-pad">
+    <div class="footer-brand">CAGSNET 26</div>
+    <div class="footer-links">
+      <a href="#about">Genesis</a>
+      <a href="#stories">The Disconnect</a>
+      <a href="#tables">Supply Tables</a>
+      <a href="#ecosystem">Platform</a>
+      <a href="#plan">Waters Edge</a>
+      <a href="#sponsors">Partnerships</a>
+      <a href="/sponsorship-proposal.pdf" target="_blank">Proposal PDF</a>
+    </div>
+    <div class="footer-bottom">
+      <span>Ceylon Academy of Gemmological Science (CAGS) · Dumidu Senanayake</span>
+      <span>October 29, 2026 · Waters Edge, Sri Lanka</span>
+    </div>
+  </footer>
+
+  <!-- ARCHIVAL BOX OFFICE & ACCREDITATION MODAL -->
+  <div id="box-office-modal" class="site-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="close-modal-btn" aria-label="Close modal">✕ CLOSE</button>
+      
+      <div class="section-kicker" style="margin-bottom:20px;">
+        <span>OFFICIAL ACCREDITATION</span>
+        <span>WATERS EDGE GALA · 29 OCT 2026</span>
+      </div>
+
+      <h3 style="font-family:var(--display); font-size:36px; line-height:1; margin-bottom:12px; color:var(--paper);">
+        DELEGATE PASS &amp; SEATING
+      </h3>
+      <p style="font-size:14px; color:var(--muted); margin-bottom:30px;">
+        Seating is allocated strictly to supply chain sector tables. Certified CAGS alumni receive priority accreditation.
+      </p>
+
+      <form id="accreditation-form" class="ticket-form">
+        <div>
+          <label for="delegate-name">Full Legal / Industry Name</label>
+          <input type="text" id="delegate-name" required placeholder="e.g. Gamini Jayawardena">
+        </div>
+
+        <div>
+          <label for="delegate-email">Corporate Email Address</label>
+          <input type="email" id="delegate-email" required placeholder="name@domain.com">
+        </div>
+
+        <div>
+          <label for="delegate-phone">Direct Contact / WhatsApp</label>
+          <input type="tel" id="delegate-phone" required placeholder="+94 77 000 0000">
+        </div>
+
+        <div>
+          <label for="delegate-sector">Assigned Supply Chain Dinner Table</label>
+          <select id="delegate-sector">
+            <option value="Miners & Geologists">Table 01: Miners &amp; Geologists</option>
+            <option value="Cut & Polish Lapidary Masters">Table 02: Cut &amp; Polish Lapidary Masters</option>
+            <option value="Agents & Certified Brokers">Table 03: Agents &amp; Certified Brokers</option>
+            <option value="International Traders & Exporters">Table 04: International Traders &amp; Exporters</option>
+            <option value="Fine Jewelers & Goldsmith Ateliers">Table 05: Fine Jewelers &amp; Goldsmith Ateliers</option>
+            <option value="Spectroscopy & Tech Labs">Table 06: Spectroscopy &amp; Tech Labs</option>
+            <option value="GIA / DGemG / SLGJA Presidential Suite">Dignitary Suite: GIA / DGemG / SLGJA</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="delegate-alumni">CAGS Affiliation</label>
+          <select id="delegate-alumni">
+            <option value="CAGS Alumni Graduate">Yes, I am a CAGS Certificate Alumnus (2,000+ Alumni)</option>
+            <option value="Industry Trade Professional">Active Industry Trade Professional</option>
+            <option value="Sponsorship Partner Representative">Sponsorship Partner Representative</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button" style="width:100%; margin-top:15px; justify-content:center;">
+          Generate Holographic Pass <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+        </button>
+      </form>
+
+      <!-- Badge Result Card (Rendered upon submit) -->
+      <div id="badge-display" class="hologram-badge" style="display:none;">
+        <div style="font-family:SpaceMono, monospace; font-size:11px; text-transform:uppercase; letter-spacing:.11em; color:var(--accent); margin-bottom:12px;">
+          ✦ ACCREDITATION CONFIRMED · CAGSNET 26 ✦
+        </div>
+        <h4 id="pass-name">MR. GAMINI JAYAWARDENA</h4>
+        <div id="pass-sector" style="font-family:SpaceMono, monospace; font-size:12px; color:var(--paper); margin-bottom:15px;">
+          SECTOR: CUT &amp; POLISH LAPIDARY MASTERS
+        </div>
+        <div style="font-family:SpaceMono, monospace; font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px; display:flex; justify-content:space-between;">
+          <span>SEAT: TABLE B2 // 04</span>
+          <span>DATE: 29 OCT 2026</span>
+          <span>18:00 HRS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
