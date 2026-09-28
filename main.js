@@ -19,6 +19,11 @@
   const siteNav = document.getElementById('site-nav');
   const navLinks = document.querySelectorAll('.site-nav-list a');
 
+  // 01 / The Island of Gems Video Backdrop
+  const introSection = document.querySelector('.intro');
+  const introBackdrop = document.querySelector('.intro-media-backdrop');
+  const introVideo = document.querySelector('.intro-bg-video');
+
   // Stories Pin & Track (Horizontal Scrollytelling)
   const stories = document.querySelector('.stories-scroll');
   const storiesPin = document.querySelector('.stories-pin');
@@ -161,6 +166,20 @@
       if (heroTitle) {
         heroTitle.style.transform = `translate3d(0, ${y * 0.1}px, 0)`;
         heroTitle.style.opacity = String(clamp(1 - y / (heroHeight * 0.85)));
+      }
+    }
+
+    // 01 / The Island of Gems: Video Scroll-Triggered Parallax
+    if (introSection && introBackdrop) {
+      const rect = introSection.getBoundingClientRect();
+      const winH = window.innerHeight;
+      if (rect.bottom > 0 && rect.top < winH) {
+        const progress = (winH - rect.top) / (winH + rect.height);
+        const parallaxY = (progress - 0.5) * 160;
+        introBackdrop.style.transform = `translate3d(0, ${parallaxY.toFixed(1)}px, 0)`;
+        if (introVideo && introVideo.paused) {
+          introVideo.play().catch(() => {});
+        }
       }
     }
 

@@ -1273,3 +1273,65 @@ html.modal-open { overflow:hidden; }
   font-size: 12px !important;
   letter-spacing: .11em !important;
 }
+
+/* ==========================================================================
+   ISLAND OF GEMS: CINEMATIC BACKGROUND VIDEO & SCROLL-TRIGGERED PARALLAX
+   ========================================================================== */
+.intro {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: var(--ink) !important;
+}
+
+.intro-media-backdrop {
+  position: absolute !important;
+  inset: -20% 0 !important;
+  width: 100% !important;
+  height: 140% !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  will-change: transform !important;
+  transform: translate3d(0, 0, 0);
+}
+
+.intro-bg-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 40% !important;
+  filter: saturate(1.15) brightness(0.42) contrast(1.15) !important;
+  display: block !important;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.intro-media-shade {
+  position: absolute !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse at 50% 45%, rgba(5, 10, 18, 0.35) 0%, rgba(5, 10, 18, 0.75) 60%, #050a12 95%),
+              linear-gradient(180deg, #050a12 0%, rgba(5, 10, 18, 0.25) 20%, rgba(5, 10, 18, 0.45) 80%, #050a12 100%) !important;
+  pointer-events: none !important;
+}
+
+.intro-media-fog {
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: url('/assets/fog.webp') !important;
+  background-repeat: repeat !important;
+  background-size: 900px !important;
+  opacity: 0.16 !important;
+  mix-blend-mode: screen !important;
+  pointer-events: none !important;
+  animation: intro-fog-drift 60s linear infinite !important;
+}
+
+@keyframes intro-fog-drift {
+  from { background-position: 0 0; }
+  to { background-position: 1200px 0; }
+}
+
+.intro h2, .intro-bottom p, .tour-facts {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.85);
+}
